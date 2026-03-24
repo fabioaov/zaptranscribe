@@ -1,0 +1,37 @@
+{
+  "extName": { "message": "ZapTranscribe" },
+  "extDescription": {
+    "message": "Transcribe WhatsApp Web voice messages via OpenRouter."
+  },
+  "optionsTitle": { "message": "ZapTranscribe — Options" },
+  "optionsHeading": { "message": "Settings" },
+  "optionsIntro": {
+    "message": "Set your OpenRouter API key and audio-capable models. Model list: openrouter.ai/models?input_modalities=audio"
+  },
+  "apiKeyLabel": { "message": "OpenRouter API key" },
+  "modelsLabel": { "message": "Models (fallback order)" },
+  "modelsHint": {
+    "message": "One model per line. First is primary; OpenRouter tries the rest on provider errors."
+  },
+  "languageLabel": { "message": "Preferred language (optional)" },
+  "languageHint": {
+    "message": "Short code (e.g. pt, en). Leave empty for automatic detection in the prompt."
+  },
+  "save": { "message": "Save" },
+  "saved": { "message": "Saved." },
+  "buttonWaitAudio": { "message": "Waiting for audio…" },
+  "buttonTranscribe": { "message": "Transcribe" },
+  "buttonLoading": { "message": "Transcribing..." },
+  "buttonError": { "message": "Error, try again" },
+  "buttonCopy": { "message": "Copy" },
+  "buttonCopied": { "message": "Copied" },
+  "transcriptionTitle": { "message": "Transcription" },
+  "errorNoApiKey": {
+    "message": "Set the API key in the extension options."
+  },
+  "errorGeneric": { "message": "Could not transcribe." },
+  "errorEmptyAudio": { "message": "Audio file is empty." },
+  "errorExtensionReloaded": {
+    "message": "The extension was reloaded. Refresh this WhatsApp tab (F5) and try again."
+  }
+}

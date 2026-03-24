@@ -1,0 +1,15 @@
+{
+  "name": "zaptranscribe",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('extension/dist',{recursive:true,force:true});\"",
+    "build": "npm run clean && esbuild extension/src/background.ts extension/src/content.ts extension/src/options.ts extension/src/inject.ts --bundle --outdir=extension/dist --format=iife --platform=browser --target=chrome108 --legal-comments=none",
+    "watch": "esbuild extension/src/background.ts extension/src/content.ts extension/src/options.ts extension/src/inject.ts --bundle --outdir=extension/dist --format=iife --platform=browser --target=chrome108 --legal-comments=none --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.2"
+  }
+}

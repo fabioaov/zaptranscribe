@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZapTranscribe</title>
+    <style>
+      :root {
+        font-family: system-ui, sans-serif;
+        color: #1a1a1a;
+        background: #f6f6f7;
+      }
+      body {
+        max-width: 640px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      h1 {
+        font-size: 1.25rem;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-bottom: 0.35rem;
+      }
+      input[type="password"],
+      input[type="text"],
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font: inherit;
+      }
+      textarea {
+        min-height: 6rem;
+        resize: vertical;
+      }
+      .hint {
+        font-size: 0.85rem;
+        color: #555;
+        margin: 0.25rem 0 0;
+      }
+      #status {
+        margin-top: 1rem;
+        min-height: 1.25rem;
+        font-size: 0.9rem;
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 6px;
+        background: #128c7e;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        filter: brightness(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading"></h1>
+    <p class="hint" id="intro"></p>
+
+    <label for="apiKey" id="apiKeyLabel"></label>
+    <input type="password" id="apiKey" autocomplete="off" />
+
+    <label for="models" id="modelsLabel"></label>
+    <textarea id="models" spellcheck="false"></textarea>
+    <p class="hint" id="modelsHint"></p>
+
+    <label for="language" id="languageLabel"></label>
+    <input type="text" id="language" placeholder="pt, en, …" />
+    <p class="hint" id="languageHint"></p>
+
+    <button type="button" id="save"></button>
+    <div id="status" role="status"></div>
+
+    <script src="dist/options.js"></script>
+  </body>
+</html>
